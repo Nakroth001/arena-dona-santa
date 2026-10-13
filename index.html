@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arena Dona Santa | Society, Vôlei de Areia e Bar</title>
+<meta name="description" content="Arena Dona Santa: quadras de society e vôlei de areia, com bar de bebidas e porções.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --grafite:#3c4038;
+  --grafite-escuro:#2a2d27;
+  --creme:#e6e2cc;
+  --verde:#3e8b78;
+  --bola:#232b26;
+  --texto-claro:#f1eedd;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,sans-serif;background:var(--grafite);color:var(--texto-claro);line-height:1.6;font-size:1.05rem}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--verde);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:'Pacifico',cursive;font-weight:400;line-height:1.2}
+h2{font-size:2.2rem;margin-bottom:.75rem}
+
+/* topo */
+header{position:sticky;top:0;z-index:5;background:var(--grafite-escuro);border-bottom:2px solid var(--verde)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.6rem;padding-bottom:.6rem}
+header .marca{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:'Pacifico',cursive;font-size:1.2rem}
+header .marca svg{width:44px;height:44px}
+nav{display:flex;gap:1.1rem;font-weight:600;font-size:.95rem}
+nav a{text-decoration:none;padding:.3rem 0}
+nav a:hover{color:var(--verde)}
+@media(max-width:560px){nav{display:none}}
+
+/* hero */
+.hero{text-align:center;padding:3.5rem 0 4rem;background:radial-gradient(circle at 50% 30%,#4a4f45 0,var(--grafite) 65%)}
+.hero .logo{width:min(320px,72vw);height:auto;margin:0 auto 1.5rem;display:block;filter:drop-shadow(0 12px 24px rgba(0,0,0,.35))}
+.hero p{max-width:34rem;margin:0 auto 1.75rem;font-size:1.2rem}
+.botoes{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center}
+.btn{display:inline-block;padding:.85rem 1.6rem;border-radius:999px;font-weight:800;text-decoration:none;border:2px solid var(--creme)}
+.btn.cheio{background:var(--creme);color:var(--grafite)}
+.btn.cheio:hover{background:#fff}
+.btn.vazio:hover{background:rgba(230,226,204,.12)}
+
+/* faixas */
+section{padding:4rem 0}
+.claro{background:var(--creme);color:var(--grafite)}
+.claro h2{color:var(--verde)}
+
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem}
+@media(max-width:700px){.duas{grid-template-columns:1fr}}
+.quadra{border-left:6px solid var(--verde);padding-left:1.1rem}
+.quadra h3{font-size:1.7rem;margin-bottom:.3rem}
+.quadra ul{padding-left:1.1rem;margin-top:.6rem}
+
+/* bar */
+.cardapio{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem}
+@media(max-width:700px){.cardapio{grid-template-columns:1fr}}
+.cardapio h3{font-size:1.5rem;color:var(--creme);margin-bottom:.5rem}
+.cardapio li{list-style:none;display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;border-bottom:1px dashed rgba(230,226,204,.35)}
+.cardapio li span:last-child{color:var(--creme);font-weight:800;white-space:nowrap}
+.nota{margin-top:1.25rem;font-size:.95rem;opacity:.8}
+
+/* contato */
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-top:1.5rem}
+.info h3{font-size:1.3rem;margin-bottom:.2rem;color:var(--verde)}
+
+footer{background:var(--grafite-escuro);text-align:center;padding:1.75rem 1rem;font-size:.9rem}
+</style>
+</head>
+<body>
+
+<!-- LOGO (SVG reutilizável) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="100" fill="#3c4038"/>
+    <!-- meia-lua verde -->
+    <path d="M70 50C48 80 60 114 100 117C113 118 121 115 128 110C93 113 65 92 70 50Z" fill="#3e8b78"/>
+    <!-- bola -->
+    <circle cx="105" cy="70" r="31" fill="#232b26"/>
+    <circle cx="105" cy="70" r="26" fill="#e6e2cc"/>
+    <polygon points="105,58 116,66 112,79 98,79 94,66" fill="#232b26"/>
+    <polygon points="105,58 105,46 112,47 114,56" fill="#232b26"/>
+    <polygon points="94,66 83,63 81,56 90,50 97,56" fill="#232b26"/>
+    <polygon points="116,66 127,63 130,72 124,81 114,78" fill="#232b26"/>
+    <polygon points="98,79 94,90 104,95 112,90 112,79" fill="#232b26"/>
+    <polygon points="94,66 85,75 86,84 94,90 98,79" fill="#232b26"/>
+    <!-- ondas -->
+    <g fill="none" stroke="#e6e2cc" stroke-width="5" stroke-linecap="round">
+      <path d="M96 93Q110 84 122 91T148 82"/>
+      <path d="M96 103Q110 94 122 101T146 93"/>
+      <path d="M100 112Q112 104 124 110T140 104"/>
+    </g>
+    <!-- textos -->
+    <text x="100" y="138" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="800" font-style="italic" font-size="17" letter-spacing="7" fill="#e6e2cc">ARENA</text>
+    <text x="100" y="168" text-anchor="middle" font-family="Pacifico,cursive" font-size="31" fill="#e6e2cc">Dona Santa</text>
+  </symbol>
+</svg>
+
+<header>
+  <div class="wrap">
+    <a class="marca" href="#topo" aria-label="Arena Dona Santa - início">
+      <svg aria-hidden="true"><use href="#logo"/></svg>
+      Dona Santa
+    </a>
+    <nav aria-label="Principal">
+      <a href="#quadras">Quadras</a>
+      <a href="#bar">Bar</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main id="topo">
+  <div class="hero">
+    <div class="wrap">
+      <svg class="logo" viewBox="0 0 200 200" role="img" aria-label="Logo da Arena Dona Santa"><use href="#logo"/></svg>
+      <p>Society e vôlei de areia, com bar de bebidas e porções para depois do jogo.</p>
+      <div class="botoes">
+        <!-- TROQUE o número: 55 + DDD + número, sem espaços -->
+        <a class="btn cheio" href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20reservar%20uma%20quadra." target="_blank" rel="noopener">Reservar pelo WhatsApp</a>
+        <a class="btn vazio" href="https://instagram.com/arenadonasanta" target="_blank" rel="noopener">@arenadonasanta</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="quadras" class="claro">
+    <div class="wrap">
+      <h2>Quadras</h2>
+      <p>Escolha o esporte, chame a galera e reserve o horário.</p>
+      <div class="duas">
+        <article class="quadra">
+          <h3>Society</h3>
+          <p>Campo de society para o racha de semana ou o fim de semana com os amigos.</p>
+          <ul>
+            <li>Reserva por horário</li>
+            <li>Aluguel de colete e bola (confirmar)</li>
+          </ul>
+        </article>
+        <article class="quadra">
+          <h3>Vôlei de areia</h3>
+          <p>Quadras de areia para jogar descalço, de dupla ou de time.</p>
+          <ul>
+            <li>Reserva por horário</li>
+            <li>Bola disponível (confirmar)</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="bar">
+    <div class="wrap">
+      <h2>Bar da Arena</h2>
+      <p>Bebida gelada e porção na mesa, olhando o jogo.</p>
+      <div class="cardapio">
+        <div>
+          <h3>Bebidas</h3>
+          <ul>
+            <li><span>Cerveja</span><span>R$ 00,00</span></li>
+            <li><span>Refrigerante</span><span>R$ 00,00</span></li>
+            <li><span>Água</span><span>R$ 00,00</span></li>
+            <li><span>Suco / Isotônico</span><span>R$ 00,00</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Porções</h3>
+          <ul>
+            <li><span>Batata frita</span><span>R$ 00,00</span></li>
+            <li><span>Calabresa acebolada</span><span>R$ 00,00</span></li>
+            <li><span>Frango à passarinho</span><span>R$ 00,00</span></li>
+            <li><span>Mandioca frita</span><span>R$ 00,00</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="nota">Exemplos de itens e preços para você ajustar com o cardápio real.</p>
+    </div>
+  </section>
+
+  <section id="contato" class="claro">
+    <div class="wrap">
+      <h2>Como chegar e reservar</h2>
+      <div class="info">
+        <div>
+          <h3>Endereço</h3>
+          <p>Rua / Avenida, número<br>Bairro, Cidade - UF</p>
+        </div>
+        <div>
+          <h3>Horários</h3>
+          <p>Seg a Sex: 00h às 00h<br>Sáb e Dom: 00h às 00h</p>
+        </div>
+        <div>
+          <h3>Fale com a gente</h3>
+          <p><a href="https://wa.me/5500000000000" target="_blank" rel="noopener">WhatsApp</a><br>
+          <a href="https://instagram.com/arenadonasanta" target="_blank" rel="noopener">Instagram</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="ano">2026</span> Arena Dona Santa. Todos os direitos reservados.</footer>
+<script>document.getElementById('ano').textContent=new Date().getFullYear()</script>
+</body>
+</html>
